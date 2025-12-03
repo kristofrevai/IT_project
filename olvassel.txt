@@ -127,4 +127,5 @@ A weboldal statikus, bármilyen modern böngészőben megnyitható.
   a validálást a W3C HTML validatorával lehet ellenőrizni.
 - A CSS-ben Flexbox és Grid gondoskodik az elrendezésről,
   a media query-k pedig a különböző kijelzőméretek támogatásáról.
-- Felhasznált segítségek: https://www.w3schools.com és https://getbootstrap.com/ és ChatGPT a hitelkalkulátor megvalósításához segítség kérése
+
+- Felhasznált segítségek: https://www.w3schools.com és https://getbootstrap.com/ és ChatGPT a hitelkalkulátor megvalósításához valamint design elemek létrehozásában segítség kérése
