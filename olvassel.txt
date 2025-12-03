@@ -1,6 +1,6 @@
 Projekt: CarCity – Használtautó kereskedés
 Készítette: Révai Kristóf, Neptun-kód: IS9ORB
-URL: https://github.com/kristofrevai/IT_project.git
+URL: https://kristofrevai.github.io/IT_project/
 
 1. A projekt rövid leírása
 --------------------------
@@ -119,7 +119,7 @@ A weboldal statikus, bármilyen modern böngészőben megnyitható.
    - index.html fájl megnyitása a böngészőben.
 
 2) Online (GitHub Pages):
-   - URL: https://github.com/kristofrevai/IT_project.git
+   - URL: https://kristofrevai.github.io/IT_project/
 
 7. Egyéb megjegyzések
 ---------------------
@@ -129,3 +129,4 @@ A weboldal statikus, bármilyen modern böngészőben megnyitható.
   a media query-k pedig a különböző kijelzőméretek támogatásáról.
 
 - Felhasznált segítségek: https://www.w3schools.com és https://getbootstrap.com/ és ChatGPT a hitelkalkulátor megvalósításához valamint design elemek létrehozásában segítség kérése
+
