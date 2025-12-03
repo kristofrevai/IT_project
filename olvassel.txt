@@ -1,0 +1,130 @@
+Projekt: CarCity – Használtautó kereskedés
+Készítette: Révai Kristóf, Neptun-kód: IS9ORB
+URL: https://github.com/kristofrevai/IT_project.git
+
+1. A projekt rövid leírása
+--------------------------
+A CarCity weboldal egy fiktív használtautó-kereskedést mutat be.
+A látogató megismerheti a kínálat egy részét, kiszámolhatja a hitel várható
+havi törlesztőrészletét, valamint kapcsolatba léphet az eladóval egy űrlap
+segítségével.
+
+A weboldal reszponzív kialakítású, különböző képernyőméreteken
+(mobil, tablet, desktop) jól használható. A felső menü minden oldalon
+ugyanaz, így az oldalak között könnyű a navigáció.
+
+2. Fájlstruktúra
+---------------- 	
+Gyökérmappa:
+- index.html         – Kezdőlap, rövid bemutatkozás, kiemelt autók
+- autok.html         – Autólista oldal (több autó kártyás megjelenítése, márkaszűréssel)
+- kalkulator.html    – Hitelkalkulátor oldal (saját interaktív program)
+- kapcsolat.html     – Kapcsolatfelvételi űrlap validálással
+
+Almappák:
+- css/
+    - style.css      – Egyetlen központi stíluslap (layout, színek, reszponzivitás)
+- js/
+    - main.js        – Navigáció (mobil menü) és az autók márka szerinti szűrése
+    - form-validation.js – Kapcsolat űrlap kliens oldali validálása
+    - kalkulator.js  – Hitelkalkulátor logikája (számítások, eredmények kiírása)
+- images/
+    - autóképek (pl. opelinsignia.jpg, audia4.jpg, stb.) – illusztrációk az autókhoz
+    - logo.svg       – Az oldal faviconja és logója
+
+3. Felhasznált technológiák
+---------------------------
+- HTML5
+- CSS3
+  - Flexbox
+  - CSS Grid
+  - Media query-k a reszponzív megjelenéshez
+- Natív JavaScript (külön .js fájlokban)
+
+Külső JavaScript keretrendszert vagy könyvtárat NEM használok.
+A designhoz egy Google Web Font (Roboto) kerül betöltésre.
+
+4. Kötelező elemek teljesítése
+------------------------------
+Oldalszerkezet:
+- 4 különálló oldal: index, autók, kalkulátor, kapcsolat.
+- Egységes, minden oldalon megjelenő navigációs sáv.
+
+Reszponzivitás:
+- A layout Flexbox és CSS Grid segítségével épül fel.
+- Media query-k biztosítják a mobil, tablet és desktop nézetet
+  (pl. a menü mobilon hamburger menüvé alakul).
+
+Űrlap (kapcsolat.html):
+- Kapcsolatfelvételi űrlap több mezővel:
+  * név (text)
+  * e-mail (email)
+  * telefon (tel)
+  * életkor (number)
+  * autó kiválasztása (select)
+  * kapcsolattartási mód (radio)
+  * dátum (date)
+  * üzenet (textarea)
+  * adatkezelési hozzájárulás (checkbox)
+- Minden fontos mezőhöz tartozik <label>.
+- Legalább 5 mező JavaScript segítségével validálva a form-validation.js-ben:
+  * név (min. hossz)
+  * e-mail (formátum)
+  * telefonszám (min. hossz)
+  * autó kiválasztása (select nem lehet üres)
+  * kapcsolattartási mód választása (radio)
+  * GDPR checkbox kötelező jelölése
+- Hibák esetén hibaüzenetek jelennek meg, sikeres küldéskor visszajelzés látható.
+
+Saját interaktív program (kalkulator.html + kalkulator.js):
+- Hitelkalkulátor, amely kiszámolja:
+  * az igényelt hitel összegét (autó vételára – önerő százalék alapján),
+  * a havi törlesztőrészletet (annuitás képlettel),
+  * a teljes visszafizetendő összeget,
+  * az összes kamatot (túlfizetés),
+  * valamint – ha meg van adva – a biztosítási díjjal növelt teljes havi kiadást.
+- Bemeneti mezők:
+  * autó vételára (Ft)
+  * önerő százalék (%)
+  * éves kamatláb (%)
+  * futamidő (hónap) – csúszkával (range input)
+  * biztosítás/casco havi díja (opcionális)
+- A program a weboldal témájához illeszkedik, nem validálási célú, külön .js fájlban van.
+
+Márkaszűrés az autók oldalon (autok.html + main.js):
+- Az autók kártyái data-brand attribútumot kapnak (pl. data-brand="bmw").
+- A felső szűrőben egy legördülő listából választható ki a márka (BMW, Audi, stb.).
+- A „Szűrés” gomb megnyomásakor a JavaScript:
+  * csak azokat a kártyákat hagyja láthatóan, amelyeknél a data-brand megegyezik
+    a kiválasztott márkával,
+  * vagy ha a „Bármely” opció van kiválasztva, akkor az összes autót megjeleníti.
+- Ez egy egyszerű, de jól látható interaktív elem a kínálat oldalán.
+
+5. Metaadatok, favicon, font
+----------------------------
+- Minden HTML oldal tartalmazza a szükséges alap meta tag-eket:
+  * charset (UTF-8),
+  * viewport (reszponzív megjelenés),
+  * description,
+  * author (Révai Kristóf).
+- Favicon: logo.svg fájl, elérési útja:
+  * images/logo.svg
+- Betűtípus: Google Fonts – Roboto , minden oldalon betöltve.
+
+6. Használat / futtatás
+-----------------------
+A weboldal statikus, bármilyen modern böngészőben megnyitható.
+
+1) Helyben futtatás:
+   - index.html fájl megnyitása a böngészőben.
+
+2) Online (GitHub Pages):
+   - URL: https://github.com/kristofrevai/IT_project.git
+
+7. Egyéb megjegyzések
+---------------------
+- A HTML oldalak teljesen megfelelnek a HTML5 szabványnak;
+  a validálást a W3C HTML validatorával lehet ellenőrizni.
+- A CSS-ben Flexbox és Grid gondoskodik az elrendezésről,
+  a media query-k pedig a különböző kijelzőméretek támogatásáról.
+- Felhasznált segítségek: https://www.w3schools.com és https://getbootstrap.com/ és ChatGPT a hitelkalkulátor megvalósításához segítség kérése

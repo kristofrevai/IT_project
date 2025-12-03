@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Autóink – CarCity</title>
+    <meta name="description" content="Használt autó kínálatunk listája.">
+    <meta name="author" content="Révai Kristóf">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="images/logo.svg" type="image/png">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo2rb.png" alt="Modern használt autó" height="80">
+            </a>
+        </div>
+        <button class="nav-toggle" aria-label="Menü megnyitása">
+            ☰
+        </button>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Kezdőlap</a></li>
+                <li><a href="autok.html" class="active">Autóink</a></li>
+                <li><a href="kalkulator.html">Hitelkalkulátor</a></li>
+                <li><a href="kapcsolat.html">Kapcsolat</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <section class="page-header">
+        <h1>Aktuális kínálatunk</h1>
+        <p>Válogass minőségi használt autóink közül.</p>
+    </section>
+
+    <section class="filters">
+    <h2>Szűrés</h2>
+
+    <form class="filter-form">
+        <div class="form-row">
+            <label for="filter-marka">Márka</label>
+            <select id="filter-marka" name="marka">
+                <option value="">Bármely</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+                <option value="bmw">BMW</option>
+                <option value="volvo">Volvo</option>
+                <option value="peugeot">Peugeot</option>
+                <option value="vw">Volkswagen</option>
+                <option value="lexus">Lexus</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="toyota">Toyota</option>
+            </select>
+
+            <button type="button" class="btn secondary" id="filterBtn">Szűrés</button>
+        </div>
+    </form>
+
+    <p class="filter-note">
+        Válassz márkát, majd kattints a Szűrés gombra. Üresen hagyva minden autó látszik.
+    </p>
+</section>
+
+
+
+    <div class="car-grid">
+    <article class="car-card" data-brand="opel">
+            <img src="images/opelinsignia.jpg" alt="Opel Insignia">
+            <div class="car-body">
+                <h3>Opel Insignia</h3>
+                <p class="price">4 699 000 Ft</p>
+                <p>2.0 CDTI • 2018 • 145 000 km • Dízel</p>
+                <div class="car-actions">
+                    <a href="kalkulator.html" class="btn primary">Hitel kalkuláció</a>
+                    <a href="kapcsolat.html" class="btn secondary">Kapcsolatfelvétel</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="car-card" data-brand="audi">
+            <img src="images/audia4.jpg" alt="Audi A4">
+            <div class="car-body">
+                <h3>Audi A4</h3>
+                <p class="price">5 299 000 Ft</p>
+                <p>1.4 TSI • 2017 • 130 000 km • Benzin</p>
+                <div class="car-actions">
+                    <a href="kalkulator.html" class="btn primary">Hitel kalkuláció</a>
+                    <a href="kapcsolat.html" class="btn secondary">Kapcsolatfelvétel</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="car-card" data-brand="bmw">
+            <img src="images/bmw320d.jpg" alt="BMW 320d">
+            <div class="car-body">
+                <h3>BMW 320d</h3>
+                <p class="price">5 199 000 Ft</p>
+                <p>2.0 TDI • 2018 • 110 000 km • Dízel</p>
+                <div class="car-actions">
+                    <a href="kalkulator.html" class="btn primary">Hitel kalkuláció</a>
+                    <a href="kapcsolat.html" class="btn secondary">Kapcsolatfelvétel</a>
+                </div>
+            </div>
+        </article>
+        <article class="car-card" data-brand="volvo">
+            <img src="images/volvo.jpg" alt="Volvo XC90 T8">
+            <div class="car-body">
+                <h3>Volvo XC90 T8</h3>
+                <p class="price">12 699 000 Ft</p>
+                <p>2.0 PHEV • 2017 • 145 000 km • Hybrid</p>
+                <div class="car-actions">
+                    <a href="kalkulator.html" class="btn primary">Hitel kalkuláció</a>
+                    <a href="kapcsolat.html" class="btn secondary">Kapcsolatfelvétel</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="car-card" data-brand="peugeot">
+            <img src="images/boxer.jpg" alt="Peugeot Boxer L3H2">
+            <div class="car-body">
+                <h3>Peugeot Boxer L3H2</h3>
+                <p class="price">6 299 000 Ft</p>
+                <p>2.2 D • 2020 • 130 000 km • Dízel</p>
+                <div class="car-actions">
+                    <a href="kalkulator.html" class="btn primary">Hitel kalkuláció</a>
+                    <a href="kapcsolat.html" class="btn secondary">Kapcsolatfelvétel</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="car-card" data-brand="volkswagen">
+            <img src="images/passat.jpg" alt="Volkswagen Passat">
+            <div class="car-body">
+                <h3>Volkswagen Passat</h3>
+                <p class="price">5 199 000 Ft</p>
+                <p>2.0 D • 2015 • 110 000 km</p>
+                <div class="car-actions">
+                    <a href="kalkulator.html" class="btn primary">Hitel kalkuláció</a>
+                    <a href="kapcsolat.html" class="btn secondary">Kapcsolatfelvétel</a>
+                </div>
+            </div>
+        </article>
+        <article class="car-card" data-brand="lexus">
+            <img src="images/lexus.jpg" alt="Lexus Nx 350h">
+            <div class="car-body">
+                <h3>Lexus Nx 350h</h3>
+                <p class="price">7 699 000 Ft</p>
+                <p>2.5 I • 2018 • 145 000 km • Hybrid</p>
+                <div class="car-actions">
+                    <a href="kalkulator.html" class="btn primary">Hitel kalkuláció</a>
+                    <a href="kapcsolat.html" class="btn secondary">Kapcsolatfelvétel</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="car-card" data-brand="bmw">
+            <img src="images/bmwe60.jpg" alt="BMW E60 530d">
+            <div class="car-body">
+                <h3>BMW E60 530d</h3>
+                <p class="price">1 299 000 Ft</p>
+                <p>3.0 TDI • 2005 • 330 000 km • Dízel</p>
+                <div class="car-actions">
+                    <a href="kalkulator.html" class="btn primary">Hitel kalkuláció</a>
+                    <a href="kapcsolat.html" class="btn secondary">Kapcsolatfelvétel</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="car-card" data-brand="audi">
+            <img src="images/a6.jpg" alt="Audi A6">
+            <div class="car-body">
+                <h3>Audi A6</h3>
+                <p class="price">15 199 000 Ft</p>
+                <p>3.0 TDI • 2021 • 110 000 km • Dízel</p>
+                <div class="car-actions">
+                    <a href="kalkulator.html" class="btn primary">Hitel kalkuláció</a>
+                    <a href="kapcsolat.html" class="btn secondary">Kapcsolatfelvétel</a>
+                </div>
+            </div>
+        </article>
+        <article class="car-card" data-brand="mercedes">
+            <img src="images/mercedes.jpg" alt="Mercedes-Benz E osztály">
+            <div class="car-body">
+                <h3>Mercedes-Benz E osztály</h3>
+                <p class="price">12 699 000 Ft</p>
+                <p>2.0 D • 2022 • 45 000 km • Hybrid</p>
+                <div class="car-actions">
+                    <a href="kalkulator.html" class="btn primary">Hitel kalkuláció</a>
+                    <a href="kapcsolat.html" class="btn secondary">Kapcsolatfelvétel</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="car-card" data-brand="bmw">
+            <img src="images/bmw440.jpg" alt="BMW M440i">
+            <div class="car-body">
+                <h3>BMW M440i</h3>
+                <p class="price">16 299 000 Ft</p>
+                <p>3.0 I • 2024 • 130 000 km • Benzin</p>
+                <div class="car-actions">
+                    <a href="kalkulator.html" class="btn primary">Hitel kalkuláció</a>
+                    <a href="kapcsolat.html" class="btn secondary">Kapcsolatfelvétel</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="car-card" data-brand="toyota">
+            <img src="images/toyota.jpg" alt="Toyota Corolla">
+            <div class="car-body">
+                <h3>Toyota Corolla</h3>
+                <p class="price">5 199 000 Ft</p>
+                <p>1.8 I • 2015 • 110 000 km • Hybrid</p>
+                <div class="car-actions">
+                    <a href="kalkulator.html" class="btn primary">Hitel kalkuláció</a>
+                    <a href="kapcsolat.html" class="btn secondary">Kapcsolatfelvétel</a>
+                </div>
+            </div>
+        </article>
+    
+    </div>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>&copy; 2025 CarCity. Minden jog fenntartva.</p>
+        <p><a href="kapcsolat.html">Lépj velünk kapcsolatba</a></p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

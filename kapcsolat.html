@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Kapcsolat – CarCity</title>
+    <meta name="description" content="Lépj velünk kapcsolatba, kérdezz autóinkról vagy hitellehetőségekről.">
+    <meta name="author" content="Révai Kristóf">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="images/logo.svg" type="image/png">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo2rb.png" alt="Modern használt autó" height="80">
+            </a>
+        </div>
+        <button class="nav-toggle" aria-label="Menü megnyitása">
+            ☰
+        </button>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Kezdőlap</a></li>
+                <li><a href="autok.html">Autóink</a></li>
+                <li><a href="kalkulator.html">Hitelkalkulátor</a></li>
+                <li><a href="kapcsolat.html" class="active">Kapcsolat</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <section class="page-header">
+        <h1>Kapcsolatfelvétel</h1>
+        <p>Töltsd ki az alábbi űrlapot, és munkatársunk hamarosan felveszi veled a kapcsolatot.</p>
+    </section>
+
+    <section class="contact-section">
+        <form id="contactForm" novalidate>
+            <div class="form-row">
+                <label for="name">Teljes név *</label>
+                <input type="text" id="name" name="name" required>
+                <small class="error-message"></small>
+            </div>
+
+            <div class="form-row">
+                <label for="email">E-mail cím *</label>
+                <input type="email" id="email" name="email" required>
+                <small class="error-message"></small>
+            </div>
+
+            <div class="form-row">
+                <label for="phone">Telefonszám *</label>
+                <input type="tel" id="phone" name="phone" placeholder="+36..." required>
+                <small class="error-message"></small>
+            </div>
+
+            <div class="form-row">
+                <label for="age">Életkor (év)</label>
+                <input type="number" id="age" name="age" min="18" max="90">
+                <small class="error-message"></small>
+            </div>
+
+            <div class="form-row">
+                <label for="car">Érdeklődés az alábbi autó iránt *</label>
+                <select id="car" name="car" required>
+                    <option value="">-- Válassz egy autót --</option>
+                    <option value="opel">Opel Insignia</option>
+                    <option value="audi">Audi A4</option>
+                    <option value="audi">Audi A6</option>
+                    <option value="bmw">BMW 320d</option>
+                    <option value="bmw">BMW E60 530d</option>
+                    <option value="bmw">BMW M440i</option>
+                    <option value="volvo">Volvo XC90 T8</option>
+                    <option value="peugeot">Peugeot Boxer L3H2</option>
+                    <option value="vw">Volkswagen Passat</option>
+                    <option value="lexus">Lexus Nx 350h</option>
+                    <option value="mercedes">Mercedes-Benz E osztály</option>
+                    <option value="toyota">Toyota Corolla</option>
+                    <option value="egyeb">Még nem tudom / Egyéb</option>
+                </select>
+                <small class="error-message"></small>
+            </div>
+
+            <div class="form-row">
+                <span>Kapcsolattartás módja (legalább egy) *</span>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="contactMethod" value="phone">
+                        Telefonon hívjanak
+                    </label>
+                    <label>
+                        <input type="radio" name="contactMethod" value="email">
+                        E-mailt kérek
+                    </label>
+                </div>
+                <small class="error-message"></small>
+            </div>
+
+            <div class="form-row">
+                <label for="date">Preferált időpont visszahívásra</label>
+                <input type="date" id="date" name="date">
+                <small class="error-message"></small>
+            </div>
+
+            <div class="form-row">
+                <label for="message">Üzenet</label>
+                <textarea id="message" name="message" rows="4" maxlength="500" placeholder="Kérdésed, megjegyzésed..."></textarea>
+                <small class="error-message"></small>
+            </div>
+
+            <div class="form-row checkbox-row">
+                <label>
+                    <input type="checkbox" id="gdpr" name="gdpr" required>
+                    Elfogadom az adatkezelési tájékoztatót. *
+                </label>
+                <small class="error-message"></small>
+            </div>
+
+            <button type="submit" class="btn primary">Üzenet elküldése</button>
+            <p id="formSuccess" class="form-success" aria-live="polite"></p>
+        </form>
+
+        <aside class="contact-info">
+            <h2>Elérhetőségeink</h2><br>
+            <p><strong>Cím:</strong> 1111 Budapest, Autó utca 1.</p><br>
+            <p><strong>Telefon:</strong> +36 30 123 4567</p><br>
+            <p><strong>E-mail:</strong> info@carcity.hu</p><br>
+            <p><strong>Nyitvatartás:</strong> H–P: 9:00–18:00, Szo: 9:00–13:00</p>
+        </aside>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>&copy; 2025 CarCity. Minden jog fenntartva.</p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/form-validation.js"></script>
+</body>
+</html>
